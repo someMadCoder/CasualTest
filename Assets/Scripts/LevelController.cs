@@ -8,19 +8,13 @@ public class LevelController : MonoBehaviour
     [SerializeField] private GameObject _losePanel;
     private FinishZone _finishZone;
     private Player _player;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
         _finishZone = FindObjectOfType<FinishZone>();
         _finishZone.PlayerWon += PlayerWon;
         _player = FindObjectOfType<Player>();
         _player.PlayerLost += PlayerLost;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void PlayerWon()

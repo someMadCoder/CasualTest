@@ -10,15 +10,15 @@ public class ObstacleBrush : MonoBehaviour
     private Camera _camera;
     [SerializeField] private float _swipeForce=10;
     private Swipe _swipe;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
         _camera = GetComponent<Camera>();
         _swipe = GetComponent<Swipe>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 

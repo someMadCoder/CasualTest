@@ -10,9 +10,9 @@ public class Obstacle : MonoBehaviour
     private bool _pointsCounted;
 
     public bool PointsCounted { get => _pointsCounted; set => _pointsCounted = value; }
-
+    //чтобы использовать такой вариант свайпа нужно раскомментировать код и выключить Obstacle brush у камеры на сцене
     #region take and pull
-    //[SerializeField] private Transform debugSphere;
+    ////[SerializeField] private Transform debugSphere;
     //private Vector3 startPosition;
     //private float distanseToCamera;
     //private Rigidbody rb;
@@ -31,7 +31,7 @@ public class Obstacle : MonoBehaviour
     //        distanseToCamera = (startPosition - Camera.main.transform.position).magnitude;
 
     //        Vector3 direction = (Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, distanseToCamera)) - transform.position);
-    //        debugSphere.position = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, distanseToCamera));
+    //        //debugSphere.position = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, distanseToCamera));
 
     //        rb.velocity = direction * 10;
 
@@ -44,7 +44,7 @@ public class Obstacle : MonoBehaviour
 
     //private void OnCollisionStay(Collision collision)
     //{
-    //    if(collision.transform.CompareTag("Road") & !_canBeMoved)
+    //    if (collision.transform.CompareTag("Road") & !_canBeMoved)
     //        _canBeMoved = true;
     //}
     #endregion
